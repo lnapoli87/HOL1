@@ -43,13 +43,18 @@ Download XCode 6 with iOS8 support, sdk and XCode developer tools.
 
 03. On the Project settings (click on the root item in the file explorer)
 
-    - Go to **build settings** with **All** option selected
-    - Search for the property "Other Linker Flags"
-    - Add a new flag named "-ObjC"
-    - Save the changes
+04. Go to **build settings** with **All** option selected
 
     ![](img/fig.3.png)
+
+05. Search for the property "Other Linker Flags"
+
+06. Add a new flag named "-ObjC"
+    
     ![](img/fig.4.png)
+
+07. Save the changes
+
 
 ###Task 2 - Add ADALiOS library and bundles
 
