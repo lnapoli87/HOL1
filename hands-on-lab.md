@@ -1,4 +1,4 @@
-﻿Module 06: *Authenticate to AD with iOS*
+﻿Module XX: *Authenticate to AD with iOS*
 ==========================
 
 ##Overview
