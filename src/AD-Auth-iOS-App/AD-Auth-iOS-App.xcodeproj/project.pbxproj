@@ -19,6 +19,7 @@
 		D942210519E825B300F0D350 /* libADALiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D94220F719E8246500F0D350 /* libADALiOS.a */; };
 		D942210D19E82EB800F0D350 /* ADAL_iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D942210B19E82EB800F0D350 /* ADAL_iPad_Storyboard.storyboard */; };
 		D942210E19E82EB800F0D350 /* ADAL_iPhone_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D942210C19E82EB800F0D350 /* ADAL_iPhone_Storyboard.storyboard */; };
+		D9A833A819EDA00500384C8D /* ic_launcher-web.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A833A719EDA00400384C8D /* ic_launcher-web.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D942210019E8248400F0D350 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D942210B19E82EB800F0D350 /* ADAL_iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ADAL_iPad_Storyboard.storyboard; path = lib/ADALiOS/ADALiOS/ADAL_iPad_Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 		D942210C19E82EB800F0D350 /* ADAL_iPhone_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ADAL_iPhone_Storyboard.storyboard; path = lib/ADALiOS/ADALiOS/ADAL_iPhone_Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
+		D9A833A719EDA00400384C8D /* ic_launcher-web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_launcher-web.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		D94220C819E821ED00F0D350 /* AD-Auth-iOS-App */ = {
 			isa = PBXGroup;
 			children = (
+				D9A833A719EDA00400384C8D /* ic_launcher-web.png */,
 				D94220CD19E821ED00F0D350 /* AppDelegate.h */,
 				D94220CE19E821ED00F0D350 /* AppDelegate.m */,
 				D94220D019E821ED00F0D350 /* ViewController.h */,
@@ -301,6 +304,7 @@
 				D942210D19E82EB800F0D350 /* ADAL_iPad_Storyboard.storyboard in Resources */,
 				D94220D719E821ED00F0D350 /* Images.xcassets in Resources */,
 				D942210219E8248400F0D350 /* InfoPlist.strings in Resources */,
+				D9A833A819EDA00500384C8D /* ic_launcher-web.png in Resources */,
 				D942210E19E82EB800F0D350 /* ADAL_iPhone_Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
