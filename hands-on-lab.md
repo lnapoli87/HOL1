@@ -84,7 +84,7 @@ git clone https://github.com/AzureAD/azure-activedirectory-library-for-objc
 
     ![](img/fig.9.png)
 
-07. Build the project from the menu **Project -> Build** and check if success
+07. Build the project from the menu **Project -> Build** and check if succeeded
     
     ![](img/fig.10.png)
 
@@ -224,11 +224,10 @@ NSString* token;
         }
 ```
 
-06. Call the clear action with ADALiOS
+06. Call the clear action with ADALiOS Adding the following to the clear action button behaviour method
 
-```
-    - Add the following to the clear action button behaviour method
-        
+
+```        
         - (IBAction)clearAction:(id)sender {
             ADAuthenticationError* error;
             id<ADTokenCacheStoring> cache = [ADAuthenticationSettings sharedInstance].defaultTokenCacheStore;
