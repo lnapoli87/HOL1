@@ -267,7 +267,7 @@ NSString* token;
 
 07. Build and Run application with the **Play** button in the left corner of the screen
 
-    ![](img/fig.22.png)
+    ![](img/fig.23.png)
 
 
 ##Summary
