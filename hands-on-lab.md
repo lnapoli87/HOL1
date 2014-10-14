@@ -43,9 +43,9 @@ Download XCode 6 with iOS8 support, sdk and XCode developer tools.
 
 03. On the Project settings (click on the root item in the file explorer)
 
-04. Go to **build settings** with **All** option selected
-
     ![](img/fig.3.png)
+
+04. Go to **build settings** with **All** option selected
 
 05. Search for the property "Other Linker Flags"
 
@@ -56,42 +56,55 @@ Download XCode 6 with iOS8 support, sdk and XCode developer tools.
 07. Save the changes
 
 
-###Task 2 - Add ADALiOS library and bundles
+###Task 2 - Add ADALiOS library
 
 01. Clone ADALiOS library from GitHub
 
-    - Run the command: git clone https://github.com/AzureAD/azure-activedirectory-library-for-objc
-    - Open the downloaded folder and copy ADALiOS folder into our project directory, for convention under a folder named "lib"
+```
+git clone https://github.com/AzureAD/azure-activedirectory-library-for-objc
+```
+   
+02. Open the downloaded folder and copy ADALiOS folder into our project directory, for convention under a folder named "lib"
     
     ![](img/fig.5.png)
 
-02. Import ADALiOS library into the project
-    
-    - Open ADALiOS folder and drag **ADALiOS.xcodeproj** into the XCode, under the project file
+03. Open ADALiOS folder and drag **ADALiOS.xcodeproj** into the XCode, under the project file
 
     ![](img/fig.6.png)
 
-03. Under Project Settings
-    
-    - Go to **Build Phases**
-    - Add an Item under **Target Dependencies** and select the ADALiOS library
-    - Add an Item under **Link Binary with Libraries** and select the ADALiOS packed library (the file with .a extension)
-    - Build the project from the menu **Project -> Build** and check if success
+04. Under Project Settings go to **Build Phases**
 
     ![](img/fig.7.png)
+
+05. Add an Item under **Target Dependencies** and select the ADALiOS library
+
     ![](img/fig.8.png)
+
+06. Add an Item under **Link Binary with Libraries** and select the ADALiOS packed library (the file with .a extension)
+
     ![](img/fig.9.png)
+
+07. Build the project from the menu **Project -> Build** and check if success
+    
     ![](img/fig.10.png)
 
-04. Importing ADALiOS bundle: the library comes with a bundle that is required to access the AzureAD login page
 
-    - On Finder, look for **ADALiOSBundle** folder under the ADALiOS library in the lib directory
-    - Drag this folder into the XCode, under the project file
-    - Look for the storyboard files (one for iPad and one for iPhone) inside **ADALiOS** library folder
-    - Drag the to files into XCode, under the newly added ADALiOSBundle folder
-    - Check the files hierarchy and build the project
+###Task 3 - Import ADALiOS bundle
+
+01. Importing ADALiOS bundle: the library comes with a bundle that is required to access the AzureAD login page
+
+02. On Finder, look for **ADALiOSBundle** folder under the ADALiOS library in the lib directory
+
+03. Drag this folder into the XCode, under the project file
+
+04. Look for the storyboard files (one for iPad and one for iPhone) inside **ADALiOS** library folder
+
+05. Drag the to files into XCode, under the newly added ADALiOSBundle folder
 
     ![](img/fig.11.png)
+
+06. Check the files hierarchy and build the project
+    
     ![](img/fig.12.png)
 
 
@@ -103,24 +116,35 @@ In this exercise you will add the action buttons to the application, connect the
 ###Task 1 - Add buttons to the view and connect to the code
 
 01. Using the storyboard feature, open the Main.storyboard file and add two buttons for Login and Clear actions
-    
-    - Also change the storyboard size to have a real reference of the screen. Do this selecting the view and changing the settings from the right panel
-    
+
     ![](img/fig.13.png)
+
     ![](img/fig.14.png)
+    
+02. Change the storyboard size to have a real reference of the screen. Do this selecting the view and changing the settings from the right panel
+        
     ![](img/fig.15.png)
 
-02. Open the **Assistant Editor** clicking the icon on the right corner of the XCode window. This will show the counterparts of a file
+03. Open the **Assistant Editor** clicking the icon on the right corner of the XCode window. This will show the counterparts of a file
 
-    - Select the **ViewController.h** file to connect the buttons
-    - Right click on the buttons and drag the line to the header file of the controller.
-    - Select the **ViewController.m** in the right editor to connect actions with this counterpart
-    - Right click on the buttons and drag the line to the implementation file of the controller
+
+
+04. Select the **ViewController.h** file to connect the buttons
 
     ![](img/fig.16.png)
+
+05. Right click on the buttons and drag the line to the header file of the controller.
+
     ![](img/fig.17.png)
+
     ![](img/fig.18.png)
+
+06. Select the **ViewController.m** in the right editor to connect actions with this counterpart
+
     ![](img/fig.20.png)
+
+07. Right click on the buttons and drag the line to the implementation file of the controller
+
     ![](img/fig.21.png)
     ![](img/fig.22.png)
 
@@ -129,25 +153,30 @@ In this exercise you will add the action buttons to the application, connect the
 
 01. On the **ViewController.m** file add the following imports before the implementation declaration
 
-    #import <ADALiOS/ADAuthenticationContext.h>
-    #import <ADALiOS/ADAuthenticationParameters.h>
-    #import <ADALiOS/ADAuthenticationSettings.h>
-    #import <ADALiOS/ADLogger.h>
-    #import <ADALiOS/ADInstanceDiscovery.h>
+```
+#import <ADALiOS/ADAuthenticationContext.h>
+#import <ADALiOS/ADAuthenticationParameters.h>
+#import <ADALiOS/ADAuthenticationSettings.h>
+#import <ADALiOS/ADLogger.h>
+#import <ADALiOS/ADInstanceDiscovery.h>
+```
 
 02. Inside the implementation declaration add the following variables
 
-    ADAuthenticationContext* authContext;
-    NSString* authority;
-    NSString* redirectUriString;
-    NSString* resourceId;
-    NSString* clientId;
-    NSString* token;
+```
+ADAuthenticationContext* authContext;
+NSString* authority;
+NSString* redirectUriString;
+NSString* resourceId;
+NSString* clientId;
+NSString* token;
+```
 
 03. Set the variables values in the viewDidLoad method to initialize the info when the application starts
 
 04. Call the login action with ADALiOS 
 
+```
     - Add the following method to the implementation file
 
         -(void) getToken : (BOOL) clearCache completionHandler:(void (^) (NSString*))completionBlock;
@@ -171,7 +200,8 @@ In this exercise you will add the action buttons to the application, connect the
                 }
             }];
         }
-
+```
+```
         -(void) showError:(NSString *)error{
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSString *errorMessage = [@"Login failed. Reason: " stringByAppendingString: error];
@@ -179,9 +209,11 @@ In this exercise you will add the action buttons to the application, connect the
                 [alert show];
             });
         }
+```
 
-    - Add behaviour to the login action button adding the following inside the action method
+05. Add behaviour to the login action button adding the following inside the action method
 
+```
         - (IBAction)loginAction:(id)sender {
             [self getToken:FALSE completionHandler:^(NSString *token){
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -190,9 +222,11 @@ In this exercise you will add the action buttons to the application, connect the
                 });
             }];
         }
+```
 
-05. Call the clear action with ADALiOS
+06. Call the clear action with ADALiOS
 
+```
     - Add the following to the clear action button behaviour method
         
         - (IBAction)clearAction:(id)sender {
@@ -230,7 +264,7 @@ In this exercise you will add the action buttons to the application, connect the
                 [alert show];
             });
         }
-    
+```    
 
 
 ##Summary
