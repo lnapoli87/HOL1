@@ -120,37 +120,37 @@ In this exercise you will add the action buttons to the application, connect the
     ![](img/fig.13.png)
 
     ![](img/fig.14.png)
-
-02. Add an Image and a Label for the main screen
-
-    ![](img/fig.24.png)
     
-03. Change the storyboard size to have a real reference of the screen. Do this selecting the view controller and changing the size settings from the right panel
+02. Change the storyboard size to have a real reference of the screen. Do this selecting the view controller and changing the size settings from the right panel
         
     ![](img/fig.15.png)
 
-04. Open the **Assistant Editor** clicking the icon on the right corner of the XCode window. This will show the counterparts of a file
+03. Open the **Assistant Editor** clicking the icon on the right corner of the XCode window. This will show the counterparts of a file
 
+    ![](img/fig.25.png)
 
-
-05. Select the **ViewController.h** file to connect the buttons
+04. Select the **ViewController.h** file to connect the buttons
 
     ![](img/fig.16.png)
 
-06. Right click on the buttons and drag the line to the header file of the controller.
+05. Right click on the buttons and drag the line to the header file of the controller.
 
     ![](img/fig.17.png)
 
     ![](img/fig.18.png)
 
-07. Select the **ViewController.m** in the right editor to connect actions with this counterpart
+06. Select the **ViewController.m** in the right editor to connect actions with this counterpart
 
     ![](img/fig.20.png)
 
-08. Right click on the buttons and drag the line to the implementation file of the controller
+07. Right click on the buttons and drag the line to the implementation file of the controller
 
     ![](img/fig.21.png)
     ![](img/fig.22.png)
+
+08. Finally add an Image and a Label in the main screen
+
+    ![](img/fig.24.png)
 
 
 ###Task 2 - Add behaviour to the buttons and use ADALiOS methods
