@@ -1,4 +1,4 @@
-﻿Module XX: *Authenticate to AD with iOS*
+Module XX: *Authenticate to AD with iOS*
 ==========================
 
 ##Overview
@@ -121,7 +121,7 @@ In this exercise you will add the action buttons to the application, connect the
 
     ![](img/fig.14.png)
     
-02. Change the storyboard size to have a real reference of the screen. Do this selecting the view and changing the settings from the right panel
+02. Change the storyboard size to have a real reference of the screen. Do this selecting the view controller and changing the size settings from the right panel
         
     ![](img/fig.15.png)
 
@@ -173,6 +173,20 @@ NSString* token;
 ```
 
 03. Set the variables values in the viewDidLoad method to initialize the info when the application starts
+
+```
+authority = [NSString alloc];
+resourceId = [NSString alloc];
+clientId = [NSString alloc];
+redirectUriString = [NSString alloc];
+token = [NSString alloc];
+
+//Azure AD account info
+authority = @"http://xxx.xxx";
+resourceId = @"http://xxx.xxx";
+clientId = @"xxxx-xxxx-xxxx-xxxx";
+redirectUriString = @"http://xxx.xxx";
+```
 
 04. Call the login action with ADALiOS 
 
