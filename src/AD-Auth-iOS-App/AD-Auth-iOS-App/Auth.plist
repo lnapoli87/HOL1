@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>o365SharepointTenantUrl</key>
+	<string>https://hexacta1-my.sharepoint.com</string>
+	<key>authority</key>
+	<string>https://login.windows.net/common</string>
+	<key>redirectUriString</key>
+	<string>http://iossdkhol.hexacta.com</string>
+	<key>resourceId</key>
+	<string>https://hexacta1-my.sharepoint.com</string>
+	<key>clientId</key>
+	<string>4c0b7730-2ed7-44d1-ba58-c1ec15c61326</string>
+</dict>
+</plist>

@@ -29,10 +29,15 @@ NSString* token;
     resourceId = [NSString alloc];
     clientId = [NSString alloc];
     redirectUriString = [NSString alloc];
-    authority = @"";
-    resourceId = @"";
-    clientId = @"";
-    redirectUriString = @"";
+    
+    NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"Auth" ofType:@"plist"];
+    NSDictionary *content = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    
+    authority = [content objectForKey:@"authority"];
+    resourceId = [content objectForKey:@"resourceId"];
+    clientId = [content objectForKey:@"clientId"];
+    redirectUriString = [content objectForKey:@"redirectUriString"];
+    
     token = [NSString alloc];
 }
 
