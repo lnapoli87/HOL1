@@ -7,62 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71D20C42A7400877066C937D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5475FC0339DBA8ACA4F3059E /* libPods.a */; };
 		8DFE63D31A0FED2B00C47DAC /* Auth.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DFE63D21A0FED2B00C47DAC /* Auth.plist */; };
+		8DFE63DE1A0FEFA000C47DAC /* ADAL_iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DFE63D71A0FEFA000C47DAC /* ADAL_iPad_Storyboard.storyboard */; };
+		8DFE63DF1A0FEFA000C47DAC /* ADAL_iPhone_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DFE63D81A0FEFA000C47DAC /* ADAL_iPhone_Storyboard.storyboard */; };
+		8DFE63E01A0FEFA000C47DAC /* ADALiOSBundle-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DFE63D91A0FEFA000C47DAC /* ADALiOSBundle-Info.plist */; };
+		8DFE63E11A0FEFA000C47DAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DFE63DC1A0FEFA000C47DAC /* InfoPlist.strings */; };
+		8DFE63E31A0FF06500C47DAC /* libPods-ADALiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFE63E21A0FF06500C47DAC /* libPods-ADALiOS.a */; };
 		D94220CC19E821ED00F0D350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D94220CB19E821ED00F0D350 /* main.m */; };
 		D94220CF19E821ED00F0D350 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D94220CE19E821ED00F0D350 /* AppDelegate.m */; };
 		D94220D219E821ED00F0D350 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D94220D119E821ED00F0D350 /* ViewController.m */; };
 		D94220D519E821ED00F0D350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94220D319E821ED00F0D350 /* Main.storyboard */; };
 		D94220D719E821ED00F0D350 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94220D619E821ED00F0D350 /* Images.xcassets */; };
 		D94220DA19E821ED00F0D350 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94220D819E821ED00F0D350 /* LaunchScreen.xib */; };
-		D94220E619E821ED00F0D350 /* AD_Auth_iOS_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D94220E519E821ED00F0D350 /* AD_Auth_iOS_AppTests.m */; };
-		D942210119E8248400F0D350 /* ADALiOSBundle-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D94220FD19E8248400F0D350 /* ADALiOSBundle-Info.plist */; };
-		D942210219E8248400F0D350 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D94220FF19E8248400F0D350 /* InfoPlist.strings */; };
-		D942210519E825B300F0D350 /* libADALiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D94220F719E8246500F0D350 /* libADALiOS.a */; };
-		D942210D19E82EB800F0D350 /* ADAL_iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D942210B19E82EB800F0D350 /* ADAL_iPad_Storyboard.storyboard */; };
-		D942210E19E82EB800F0D350 /* ADAL_iPhone_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D942210C19E82EB800F0D350 /* ADAL_iPhone_Storyboard.storyboard */; };
 		D9A833A819EDA00500384C8D /* ic_launcher-web.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A833A719EDA00400384C8D /* ic_launcher-web.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D94220E019E821ED00F0D350 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D94220BE19E821ED00F0D350 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D94220C519E821ED00F0D350;
-			remoteInfo = "AD-Auth-iOS-App";
-		};
-		D94220F619E8246500F0D350 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D94220EF19E8246500F0D350 /* ADALiOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8B0965AA17F25770002BDFB8;
-			remoteInfo = ADALiOS;
-		};
-		D94220F819E8246500F0D350 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D94220EF19E8246500F0D350 /* ADALiOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8B0965BA17F25770002BDFB8;
-			remoteInfo = ADALiOSTests;
-		};
-		D94220FA19E8246500F0D350 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D94220EF19E8246500F0D350 /* ADALiOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8BFEF05C182DA57800122C0C;
-			remoteInfo = ADALiOSBundle;
-		};
-		D942210319E825A800F0D350 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D94220EF19E8246500F0D350 /* ADALiOS.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B0965A917F25770002BDFB8;
-			remoteInfo = ADALiOS;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		34ED879A0435AC750CDCE8A8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5475FC0339DBA8ACA4F3059E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		683A2D457E9DF978E724994D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8DFE63D21A0FED2B00C47DAC /* Auth.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Auth.plist; sourceTree = "<group>"; };
+		8DFE63D71A0FEFA000C47DAC /* ADAL_iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ADAL_iPad_Storyboard.storyboard; path = "AD-Auth-iOS-App/ADALiOSBundle/ADAL_iPad_Storyboard.storyboard"; sourceTree = SOURCE_ROOT; };
+		8DFE63D81A0FEFA000C47DAC /* ADAL_iPhone_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ADAL_iPhone_Storyboard.storyboard; path = "AD-Auth-iOS-App/ADALiOSBundle/ADAL_iPhone_Storyboard.storyboard"; sourceTree = SOURCE_ROOT; };
+		8DFE63D91A0FEFA000C47DAC /* ADALiOSBundle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ADALiOSBundle-Info.plist"; path = "AD-Auth-iOS-App/ADALiOSBundle/ADALiOSBundle-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8DFE63DA1A0FEFA000C47DAC /* ADALiOSBundle-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ADALiOSBundle-Prefix.pch"; path = "AD-Auth-iOS-App/ADALiOSBundle/ADALiOSBundle-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		8DFE63DD1A0FEFA000C47DAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		8DFE63E21A0FF06500C47DAC /* libPods-ADALiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ADALiOS.a"; path = "Pods/build/Debug-iphoneos/libPods-ADALiOS.a"; sourceTree = "<group>"; };
 		D94220C619E821ED00F0D350 /* AD-Auth-iOS-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AD-Auth-iOS-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94220CA19E821ED00F0D350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D94220CB19E821ED00F0D350 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -73,15 +44,6 @@
 		D94220D419E821ED00F0D350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D94220D619E821ED00F0D350 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D94220D919E821ED00F0D350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D94220DF19E821ED00F0D350 /* AD-Auth-iOS-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AD-Auth-iOS-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D94220E419E821ED00F0D350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D94220E519E821ED00F0D350 /* AD_Auth_iOS_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AD_Auth_iOS_AppTests.m; sourceTree = "<group>"; };
-		D94220EF19E8246500F0D350 /* ADALiOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ADALiOS.xcodeproj; path = lib/ADALiOS/ADALiOS.xcodeproj; sourceTree = "<group>"; };
-		D94220FD19E8248400F0D350 /* ADALiOSBundle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ADALiOSBundle-Info.plist"; sourceTree = "<group>"; };
-		D94220FE19E8248400F0D350 /* ADALiOSBundle-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ADALiOSBundle-Prefix.pch"; sourceTree = "<group>"; };
-		D942210019E8248400F0D350 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D942210B19E82EB800F0D350 /* ADAL_iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ADAL_iPad_Storyboard.storyboard; path = lib/ADALiOS/ADALiOS/ADAL_iPad_Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
-		D942210C19E82EB800F0D350 /* ADAL_iPhone_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ADAL_iPhone_Storyboard.storyboard; path = lib/ADALiOS/ADALiOS/ADAL_iPhone_Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 		D9A833A719EDA00400384C8D /* ic_launcher-web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_launcher-web.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,28 +52,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D942210519E825B300F0D350 /* libADALiOS.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D94220DC19E821ED00F0D350 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				8DFE63E31A0FF06500C47DAC /* libPods-ADALiOS.a in Frameworks */,
+				71D20C42A7400877066C937D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		607E0DD322FBE7DA5A4FD75B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DFE63E21A0FF06500C47DAC /* libPods-ADALiOS.a */,
+				5475FC0339DBA8ACA4F3059E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CF8686281E1079B0EF5E533 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				683A2D457E9DF978E724994D /* Pods.debug.xcconfig */,
+				34ED879A0435AC750CDCE8A8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8DFE63DB1A0FEFA000C47DAC /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				8DFE63DC1A0FEFA000C47DAC /* InfoPlist.strings */,
+			);
+			name = en.lproj;
+			path = "AD-Auth-iOS-App/ADALiOSBundle/en.lproj";
+			sourceTree = SOURCE_ROOT;
+		};
 		D94220BD19E821ED00F0D350 = {
 			isa = PBXGroup;
 			children = (
 				D94220FC19E8248400F0D350 /* ADALiOSBundle */,
 				D94220C819E821ED00F0D350 /* AD-Auth-iOS-App */,
-				D94220E219E821ED00F0D350 /* AD-Auth-iOS-AppTests */,
 				D94220C719E821ED00F0D350 /* Products */,
-				D94220EF19E8246500F0D350 /* ADALiOS.xcodeproj */,
+				6CF8686281E1079B0EF5E533 /* Pods */,
+				607E0DD322FBE7DA5A4FD75B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				D94220C619E821ED00F0D350 /* AD-Auth-iOS-App.app */,
-				D94220DF19E821ED00F0D350 /* AD-Auth-iOS-AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,41 +132,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D94220E219E821ED00F0D350 /* AD-Auth-iOS-AppTests */ = {
-			isa = PBXGroup;
-			children = (
-				D94220E519E821ED00F0D350 /* AD_Auth_iOS_AppTests.m */,
-				D94220E319E821ED00F0D350 /* Supporting Files */,
-			);
-			path = "AD-Auth-iOS-AppTests";
-			sourceTree = "<group>";
-		};
-		D94220E319E821ED00F0D350 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D94220E419E821ED00F0D350 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D94220F019E8246500F0D350 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D94220F719E8246500F0D350 /* libADALiOS.a */,
-				D94220F919E8246500F0D350 /* ADALiOSTests.xctest */,
-				D94220FB19E8246500F0D350 /* ADALiOS.bundle */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D94220FC19E8248400F0D350 /* ADALiOSBundle */ = {
 			isa = PBXGroup;
 			children = (
-				D942210B19E82EB800F0D350 /* ADAL_iPad_Storyboard.storyboard */,
-				D942210C19E82EB800F0D350 /* ADAL_iPhone_Storyboard.storyboard */,
-				D94220FD19E8248400F0D350 /* ADALiOSBundle-Info.plist */,
-				D94220FE19E8248400F0D350 /* ADALiOSBundle-Prefix.pch */,
-				D94220FF19E8248400F0D350 /* InfoPlist.strings */,
+				8DFE63D71A0FEFA000C47DAC /* ADAL_iPad_Storyboard.storyboard */,
+				8DFE63D81A0FEFA000C47DAC /* ADAL_iPhone_Storyboard.storyboard */,
+				8DFE63D91A0FEFA000C47DAC /* ADALiOSBundle-Info.plist */,
+				8DFE63DA1A0FEFA000C47DAC /* ADALiOSBundle-Prefix.pch */,
+				8DFE63DB1A0FEFA000C47DAC /* en.lproj */,
 			);
 			name = ADALiOSBundle;
 			path = lib/ADALiOS/ADALiOSBundle;
@@ -197,37 +152,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D94220E919E821ED00F0D350 /* Build configuration list for PBXNativeTarget "AD-Auth-iOS-App" */;
 			buildPhases = (
+				FD0A4F2AF729C5643BD65728 /* Check Pods Manifest.lock */,
 				D94220C219E821ED00F0D350 /* Sources */,
 				D94220C319E821ED00F0D350 /* Frameworks */,
 				D94220C419E821ED00F0D350 /* Resources */,
+				1408E6724C52A2910E3916FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D942210419E825A800F0D350 /* PBXTargetDependency */,
 			);
 			name = "AD-Auth-iOS-App";
 			productName = "AD-Auth-iOS-App";
 			productReference = D94220C619E821ED00F0D350 /* AD-Auth-iOS-App.app */;
 			productType = "com.apple.product-type.application";
-		};
-		D94220DE19E821ED00F0D350 /* AD-Auth-iOS-AppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D94220EC19E821ED00F0D350 /* Build configuration list for PBXNativeTarget "AD-Auth-iOS-AppTests" */;
-			buildPhases = (
-				D94220DB19E821ED00F0D350 /* Sources */,
-				D94220DC19E821ED00F0D350 /* Frameworks */,
-				D94220DD19E821ED00F0D350 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D94220E119E821ED00F0D350 /* PBXTargetDependency */,
-			);
-			name = "AD-Auth-iOS-AppTests";
-			productName = "AD-Auth-iOS-AppTests";
-			productReference = D94220DF19E821ED00F0D350 /* AD-Auth-iOS-AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -240,10 +178,6 @@
 				TargetAttributes = {
 					D94220C519E821ED00F0D350 = {
 						CreatedOnToolsVersion = 6.0.1;
-					};
-					D94220DE19E821ED00F0D350 = {
-						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = D94220C519E821ED00F0D350;
 					};
 				};
 			};
@@ -258,43 +192,12 @@
 			mainGroup = D94220BD19E821ED00F0D350;
 			productRefGroup = D94220C719E821ED00F0D350 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D94220F019E8246500F0D350 /* Products */;
-					ProjectRef = D94220EF19E8246500F0D350 /* ADALiOS.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D94220C519E821ED00F0D350 /* AD-Auth-iOS-App */,
-				D94220DE19E821ED00F0D350 /* AD-Auth-iOS-AppTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		D94220F719E8246500F0D350 /* libADALiOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libADALiOS.a;
-			remoteRef = D94220F619E8246500F0D350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D94220F919E8246500F0D350 /* ADALiOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ADALiOSTests.xctest;
-			remoteRef = D94220F819E8246500F0D350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D94220FB19E8246500F0D350 /* ADALiOS.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ADALiOS.bundle;
-			remoteRef = D94220FA19E8246500F0D350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D94220C419E821ED00F0D350 /* Resources */ = {
@@ -303,24 +206,50 @@
 			files = (
 				D94220D519E821ED00F0D350 /* Main.storyboard in Resources */,
 				D94220DA19E821ED00F0D350 /* LaunchScreen.xib in Resources */,
-				D942210119E8248400F0D350 /* ADALiOSBundle-Info.plist in Resources */,
-				D942210D19E82EB800F0D350 /* ADAL_iPad_Storyboard.storyboard in Resources */,
+				8DFE63E01A0FEFA000C47DAC /* ADALiOSBundle-Info.plist in Resources */,
 				D94220D719E821ED00F0D350 /* Images.xcassets in Resources */,
-				D942210219E8248400F0D350 /* InfoPlist.strings in Resources */,
+				8DFE63DE1A0FEFA000C47DAC /* ADAL_iPad_Storyboard.storyboard in Resources */,
 				D9A833A819EDA00500384C8D /* ic_launcher-web.png in Resources */,
 				8DFE63D31A0FED2B00C47DAC /* Auth.plist in Resources */,
-				D942210E19E82EB800F0D350 /* ADAL_iPhone_Storyboard.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D94220DD19E821ED00F0D350 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				8DFE63E11A0FEFA000C47DAC /* InfoPlist.strings in Resources */,
+				8DFE63DF1A0FEFA000C47DAC /* ADAL_iPhone_Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1408E6724C52A2910E3916FE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD0A4F2AF729C5643BD65728 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D94220C219E821ED00F0D350 /* Sources */ = {
@@ -333,30 +262,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D94220DB19E821ED00F0D350 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D94220E619E821ED00F0D350 /* AD_Auth_iOS_AppTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		D94220E119E821ED00F0D350 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D94220C519E821ED00F0D350 /* AD-Auth-iOS-App */;
-			targetProxy = D94220E019E821ED00F0D350 /* PBXContainerItemProxy */;
-		};
-		D942210419E825A800F0D350 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ADALiOS;
-			targetProxy = D942210319E825A800F0D350 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
+		8DFE63DC1A0FEFA000C47DAC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DFE63DD1A0FEFA000C47DAC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		D94220D319E821ED00F0D350 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -371,14 +287,6 @@
 				D94220D919E821ED00F0D350 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		D94220FF19E8248400F0D350 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D942210019E8248400F0D350 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -464,57 +372,36 @@
 		};
 		D94220EA19E821ED00F0D350 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 683A2D457E9DF978E724994D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "AD-Auth-iOS-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				OTHER_LIBTOOLFLAGS = "$(inherited)";
+				"OTHER_LIBTOOLFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		D94220EB19E821ED00F0D350 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34ED879A0435AC750CDCE8A8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "AD-Auth-iOS-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		D94220ED19E821ED00F0D350 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "AD-Auth-iOS-AppTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AD-Auth-iOS-App.app/AD-Auth-iOS-App";
-			};
-			name = Debug;
-		};
-		D94220EE19E821ED00F0D350 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "AD-Auth-iOS-AppTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AD-Auth-iOS-App.app/AD-Auth-iOS-App";
 			};
 			name = Release;
 		};
@@ -535,15 +422,6 @@
 			buildConfigurations = (
 				D94220EA19E821ED00F0D350 /* Debug */,
 				D94220EB19E821ED00F0D350 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D94220EC19E821ED00F0D350 /* Build configuration list for PBXNativeTarget "AD-Auth-iOS-AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D94220ED19E821ED00F0D350 /* Debug */,
-				D94220EE19E821ED00F0D350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
