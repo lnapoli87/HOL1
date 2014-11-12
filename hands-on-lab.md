@@ -146,131 +146,144 @@ In this exercise you will add the action buttons to the application, connect the
 
 01. On the **ViewController.m** file add the following imports before the implementation declaration
 
-```
-#import <ADALiOS/ADAuthenticationContext.h>
-#import <ADALiOS/ADAuthenticationParameters.h>
-#import <ADALiOS/ADAuthenticationSettings.h>
-#import <ADALiOS/ADLogger.h>
-#import <ADALiOS/ADInstanceDiscovery.h>
-```
+    ```
+    #import <ADALiOS/ADAuthenticationContext.h>
+    #import <ADALiOS/ADAuthenticationParameters.h>
+    #import <ADALiOS/ADAuthenticationSettings.h>
+    #import <ADALiOS/ADLogger.h>
+    #import <ADALiOS/ADInstanceDiscovery.h>
+    ```
 
 02. Inside the implementation declaration add the following variables
 
-```
-ADAuthenticationContext* authContext;
-NSString* authority;
-NSString* redirectUriString;
-NSString* resourceId;
-NSString* clientId;
-NSString* token;
-```
+    ```
+    ADAuthenticationContext* authContext;
+    NSString* authority;
+    NSString* redirectUriString;
+    NSString* resourceId;
+    NSString* clientId;
+    NSString* token;
+    ```
 
-03. Set the variables values in the viewDidLoad method to initialize the info when the application starts
+03. On finder, under the project folder, create a new file called **Auth.plist** and drag it into XCode under our project
 
-```
-authority = [NSString alloc];
-resourceId = [NSString alloc];
-clientId = [NSString alloc];
-redirectUriString = [NSString alloc];
-token = [NSString alloc];
+04. Open the file and fill it with the following properties:
 
-//Azure AD account info
-authority = @"http://xxx.xxx";
-resourceId = @"http://xxx.xxx";
-clientId = @"xxxx-xxxx-xxxx-xxxx";
-redirectUriString = @"http://xxx.xxx";
-```
+    ![](img/fig.28.png)
+
+    ```
+    Fill the values with the settings of your test environment
+    ```
+
+03. Set the variables values in the **viewDidLoad** method to initialize with the **Auth.plist** values when the application starts
+
+    ```
+    authority = [NSString alloc];
+    resourceId = [NSString alloc];
+    clientId = [NSString alloc];
+    redirectUriString = [NSString alloc];
+    token = [NSString alloc];
+
+    //Azure AD account info
+    NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"Auth" ofType:@"plist"];
+    NSDictionary *content = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    
+    authority = [content objectForKey:@"authority"];
+    resourceId = [content objectForKey:@"resourceId"];
+    clientId = [content objectForKey:@"clientId"];
+    redirectUriString = [content objectForKey:@"redirectUriString"];
+    ```
 
 04. Call the login action with ADALiOS 
 
-```
-    - Add the following method to the implementation file
+    ```
+        - Add the following method to the implementation file
 
-        -(void) getToken : (BOOL) clearCache completionHandler:(void (^) (NSString*))completionBlock;
-        {
-            ADAuthenticationError *error;
-            authContext = [ADAuthenticationContext authenticationContextWithAuthority:authority error:&error];
+            -(void) getToken : (BOOL) clearCache completionHandler:(void (^) (NSString*))completionBlock;
+            {
+                ADAuthenticationError *error;
+                authContext = [ADAuthenticationContext authenticationContextWithAuthority:authority error:&error];
 
-            NSURL *redirectUri = [NSURL URLWithString:redirectUriString];
+                NSURL *redirectUri = [NSURL URLWithString:redirectUriString];
 
-            if(clearCache){
-                [authContext.tokenCacheStore removeAllWithError:nil];
+                if(clearCache){
+                    [authContext.tokenCacheStore removeAllWithError:nil];
+                }
+
+                [authContext acquireTokenWithResource:resourceId clientId:clientId redirectUri:redirectUri completionBlock:^(ADAuthenticationResult *result) {
+                    if (AD_SUCCEEDED != result.status){
+                        // display error on the screen
+                        [self showError:result.error.errorDetails];
+                    }
+                    else{
+                        completionBlock(result.accessToken);
+                    }
+                }];
             }
-
-            [authContext acquireTokenWithResource:resourceId clientId:clientId redirectUri:redirectUri completionBlock:^(ADAuthenticationResult *result) {
-                if (AD_SUCCEEDED != result.status){
-                    // display error on the screen
-                    [self showError:result.error.errorDetails];
-                }
-                else{
-                    completionBlock(result.accessToken);
-                }
-            }];
-        }
-```
-```
-        -(void) showError:(NSString *)error{
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSString *errorMessage = [@"Login failed. Reason: " stringByAppendingString: error];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:self cancelButtonTitle:@"Retry" otherButtonTitles:@"Cancel", nil];
-                [alert show];
-            });
-        }
-```
+    ```
+    ```
+            -(void) showError:(NSString *)error{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSString *errorMessage = [@"Login failed. Reason: " stringByAppendingString: error];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:self cancelButtonTitle:@"Retry" otherButtonTitles:@"Cancel", nil];
+                    [alert show];
+                });
+            }
+    ```
 
 05. Add behaviour to the login action button adding the following inside the action method
 
-```
-        - (IBAction)loginAction:(id)sender {
-            [self getToken:FALSE completionHandler:^(NSString *token){
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:token delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-                    [alert show];
-                });
-            }];
-        }
-```
+    ```
+            - (IBAction)loginAction:(id)sender {
+                [self getToken:FALSE completionHandler:^(NSString *token){
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:token delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                        [alert show];
+                    });
+                }];
+            }
+    ```
 
 06. Call the clear action with ADALiOS Adding the following to the clear action button behaviour method
 
 
-```        
-        - (IBAction)clearAction:(id)sender {
-            ADAuthenticationError* error;
-            id<ADTokenCacheStoring> cache = [ADAuthenticationSettings sharedInstance].defaultTokenCacheStore;
-            NSArray* allItems = [cache allItemsWithError:&error];
+    ```        
+            - (IBAction)clearAction:(id)sender {
+                ADAuthenticationError* error;
+                id<ADTokenCacheStoring> cache = [ADAuthenticationSettings sharedInstance].defaultTokenCacheStore;
+                NSArray* allItems = [cache allItemsWithError:&error];
 
-            if (allItems.count > 0)
-            {
-                [cache removeAllWithError:&error];
-            }
+                if (allItems.count > 0)
+                {
+                    [cache removeAllWithError:&error];
+                }
 
-            if (error)
-            {
+                if (error)
+                {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        NSString *errorMessage = [@"Clear caché failed. Reason: " stringByAppendingString: error.errorDetails];
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                        [alert show];
+                    });
+                    return;
+                }
+
+                NSHTTPCookieStorage* cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+                NSArray* cookies = cookieStorage.cookies;
+                if (cookies.count)
+                {
+                    for(NSHTTPCookie* cookie in cookies)
+                    {
+                        [cookieStorage deleteCookie:cookie];
+                    }
+                }
+
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    NSString *errorMessage = [@"Clear caché failed. Reason: " stringByAppendingString: error.errorDetails];
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Cookies Cleared" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                     [alert show];
                 });
-                return;
             }
-
-            NSHTTPCookieStorage* cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-            NSArray* cookies = cookieStorage.cookies;
-            if (cookies.count)
-            {
-                for(NSHTTPCookie* cookie in cookies)
-                {
-                    [cookieStorage deleteCookie:cookie];
-                }
-            }
-
-            dispatch_async(dispatch_get_main_queue(), ^{
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Cookies Cleared" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-                [alert show];
-            });
-        }
-```    
+    ```    
 
 07. Build and Run application with the **Play** button in the left corner of the screen
 
