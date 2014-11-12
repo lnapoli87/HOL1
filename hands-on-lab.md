@@ -17,6 +17,7 @@ The lab lets students configure and run an iOS App which allows the user to auth
 - XCode developer tools (it will install git integration from XCode and the terminal)
 - You must have a Windows Azure subscription to complete this lab.
 - You must have completed Module 04 and linked your Azure subscription with your O365 tenant.
+- You must have Cocoapods dependencies manager already installed on the Mac. (cocoapods.org)
 
 ##Exercises
 
@@ -41,50 +42,36 @@ Download XCode 6 with iOS8 support, sdk and XCode developer tools.
      
     ![](img/fig.2.png)
 
-03. On the Project settings (click on the root item in the file explorer)
+03. Using Finder, on the projecct folder, create a new text file called **Podfile** (without extension), and add the lines
 
-    ![](img/fig.3.png)
+    ```
+    pod 'ADALiOS', '~>1.0.0'
+    ```  
 
-04. Go to **build settings** with **All** option selected
+04. Now open a terminal and navigate to the root folder of the project. Then execute the following command:
 
-05. Search for the property "Other Linker Flags"
+    ```
+    pod install
+    ```
 
-06. Add a new flag named "-ObjC"
-    
-    ![](img/fig.4.png)
+    ```
+    This will retrieve a copy of the ADALiOS library, store it into the local repository and
+    import into our project.
+    Always remember that this command will take effect if it's executed in the same folder as
+    the .xcodeproj file.
+    ```
 
-07. Save the changes
+05. Close XCode and re-open the project, this time using the **.xcworkspace** file. This is to have both project: the target one and the pod libraries.
 
-
-###Task 2 - Add ADALiOS library
-
-01. Clone ADALiOS library from GitHub
-
-```
-git clone https://github.com/AzureAD/azure-activedirectory-library-for-objc
-```
-   
-02. Open the downloaded folder and copy ADALiOS folder into our project directory, for convention under a folder named "lib"
-    
-    ![](img/fig.5.png)
-
-03. Open ADALiOS folder and drag **ADALiOS.xcodeproj** into the XCode, under the project file
-
-    ![](img/fig.6.png)
-
-04. Under Project Settings go to **Build Phases**
+06. Under Project Settings go to **Build Phases**
 
     ![](img/fig.7.png)
 
-05. Add an Item under **Target Dependencies** and select the ADALiOS library
-
-    ![](img/fig.8.png)
-
-06. Add an Item under **Link Binary with Libraries** and select the ADALiOS packed library (the file with .a extension)
+07. Add an Item under **Link Binary with Libraries** and select the ADALiOS packed library (the file with .a extension)
 
     ![](img/fig.9.png)
 
-07. Build the project from the menu **Project -> Build** and check if succeeded
+08. Build the project from the menu **Project -> Build** and check if succeeded
     
     ![](img/fig.10.png)
 
@@ -93,19 +80,21 @@ git clone https://github.com/AzureAD/azure-activedirectory-library-for-objc
 
 01. Importing ADALiOS bundle: the library comes with a bundle that is required to access the AzureAD login page
 
-02. On Finder, look for **ADALiOSBundle** folder under the ADALiOS library in the lib directory
+02. On XCode, create a new group to the project called **ADALiOSBundle**
 
-03. Drag this folder into the XCode, under the project file
+    ![](img/fig.26.png)
 
-04. Look for the storyboard files (one for iPad and one for iPhone) inside **ADALiOS** library folder
+02. On Finder, start from the root folder of the project, and look for **Pods/ADALiOS/ADALiOS** folder
 
-05. Drag the to files into XCode, under the newly added ADALiOSBundle folder
+03. Look for the storyboard files (one for iPad and one for iPhone) inside **ADALiOS** library folder
+
+    ![](img/fig.27.png)
+
+05. Drag the to files into XCode, under the newly created **ADALiOSBundle** folder
 
     ![](img/fig.11.png)
 
-06. Check the files hierarchy and build the project
-    
-    ![](img/fig.12.png)
+06. Build the project and check everything is ok.
 
 
 
