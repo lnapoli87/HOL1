@@ -42,7 +42,7 @@ Download XCode 6 with iOS8 support, sdk and XCode developer tools.
      
     ![](img/fig.2.png)
 
-03. Using Finder, on the projecct folder, create a new text file called **Podfile** (without extension), and add the lines
+03. Using Finder, on the project folder, create a new text file called **Podfile** (without extension), and add the lines
 
     ```
     pod 'ADALiOS', '~>1.0.0'
@@ -57,11 +57,11 @@ Download XCode 6 with iOS8 support, sdk and XCode developer tools.
     ```
     This will retrieve a copy of the ADALiOS library, store it into the local repository and
     import into our project.
-    Always remember that this command will take effect if it's executed in the same folder as
+    Always remember that this command will take effect if executed in the same folder as
     the .xcodeproj file.
     ```
 
-05. Close XCode and re-open the project, this time using the **.xcworkspace** file. This is to have both project: the target one and the pod libraries.
+05. Close XCode and re-open the project, this time using the **.xcworkspace** file. This is to have two projects: the target one and the pod libraries.
 
 06. Under Project Settings go to **Build Phases**
 
