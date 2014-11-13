@@ -382,7 +382,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				"OTHER_LIBTOOLFLAGS[arch=*]" = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -400,7 +400,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
